@@ -1,7 +1,3 @@
-@import "../modules/variables";
-@import "../modules/classes";
-@import "../modules/mixins";
-
 body {
   position: relative;
   background-color: $black;
@@ -14,5 +10,21 @@ body {
   &::-webkit-scrollbar-thumb {
     background-color: $purple;
     border-radius: 5px;
+  }
+}
+
+// 'more' button
+.button {
+  width: 80px;
+  height: 80px;
+  background-color: $white;
+  border-radius: 50%;
+  cursor: pointer;
+  @include flex-property(flex, center, center);
+  @include text-property(14px, $righteous, $dark-pink, uppercase);
+  @include transition(all, 0.25s, ease-in-out);
+  &:hover {
+    background-color: $dark-pink;
+    color: $white;
   }
 }

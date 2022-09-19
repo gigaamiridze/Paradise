@@ -1,0 +1,14 @@
+@keyframes neon-hexagon {
+  0% {
+    filter: drop-shadow(0 0 1px rgba(255, 255, 255, 0.2));
+  }
+  25% {
+    filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.6));
+  }
+  50% {
+    filter: drop-shadow(0 0 3px);
+  }
+  100% {
+    filter: drop-shadow(0 0 4px);
+  }
+}
