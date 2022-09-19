@@ -98,6 +98,104 @@ body::-webkit-scrollbar-thumb {
   background-color: #7551d8;
   border-radius: 5px;
 }
+body .horizontal-block {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 0 50px;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+body .horizontal-block h2 {
+  font-size: 45px;
+  font-family: "Monoton", cursive;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+body .horizontal-block .navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+body .horizontal-block .navigation .endpoint {
+  position: relative;
+  cursor: pointer;
+  padding: 40px 25px;
+  transition-property: all;
+  transition-duration: 0.2s;
+  transition-timing-function: ease;
+}
+body .horizontal-block .navigation .endpoint::after {
+  content: "";
+  display: none;
+  width: 100%;
+  height: 2px;
+  background-color: #7551d8;
+  border-radius: 5px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+body .horizontal-block .navigation .endpoint:hover::after {
+  display: block;
+}
+body .horizontal-block .navigation .endpoint span {
+  font-size: 15px;
+  font-family: "Open Sans", sans-serif;
+  color: #e0e0e0;
+  text-transform: capitalize;
+}
+body .horizontal-block .social-icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 4px;
+}
+body .horizontal-block .social-icons a {
+  width: 25px;
+  height: 25px;
+  background-color: #3c3c3c;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition-property: background-color;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+}
+body .horizontal-block .social-icons a:hover {
+  background-color: #7551d8;
+}
+body .horizontal-block .social-icons a::before {
+  font-weight: 400;
+  font-size: 13px;
+  font-family: "FontAwesome";
+  color: #131416;
+  text-transform: none;
+  transition-property: color;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+}
+body .horizontal-block .social-icons a:hover::before {
+  color: #ffffff;
+}
+body .horizontal-block .social-icons .youtube::before {
+  content: "\f167";
+}
+body .horizontal-block .social-icons .instagram::before {
+  content: "\f16d";
+}
+body .horizontal-block .social-icons .twitter::before {
+  content: "\f099";
+}
+body .horizontal-block .social-icons .facebook::before {
+  content: "\f39e";
+}
+body .horizontal-block .social-icons .mail::before {
+  content: "\f0e0";
+}
 
 .button {
   width: 80px;
