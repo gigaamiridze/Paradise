@@ -1,0 +1,61 @@
+.contact-section {
+  position: relative;
+  .bg-img {
+    width: 100%;
+    height: 714.5px;
+    object-fit: cover;
+  }
+  .boxes {
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    gap: 180px;
+    @include flex-property(flex, space-between, center);
+    .left-box, .right-box {
+      width: 385px;
+      height: 385px;
+      transform: rotate(45deg);
+    }     
+    .left-box {
+      background-color: $purple;
+      box-shadow: 15px 15px 10px rgb(0 0 0 / 55%);
+      opacity: .92;
+      @include flex-property(flex, center, center);
+      .contact-info {
+        transform: rotate(-45deg);
+        line-height: 25px;
+        text-align: center;
+        @include flex-property(flex, center, center);
+        flex-direction: column;
+        .addresses {
+          h5 {
+            @include text-property(16px, $openSans, $white, capitalize);
+          }
+        }
+        .mobile-mail {
+          margin: 30px 0 25px 0;
+          p {
+            @include text-property(16px, $openSans, $white, capitalize);
+            a {
+              text-transform: none;
+              color: $orange;
+              @include transition(color, 0.3s, ease-in-out);
+              &:hover {
+                color: $white;
+              }
+            }
+          }
+        }
+      }
+    }
+    .right-box {
+      background-color: transparent;
+      @include border(10px, solid, $purple);
+      .map {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
