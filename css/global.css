@@ -58,16 +58,16 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 15px;
+  font-size: 14px;
   font-family: "Righteous", cursive;
   color: #ffffff;
   text-transform: capitalize;
   transition-property: all;
-  transition-duration: 0.4s;
+  transition-duration: 0.3s;
   transition-timing-function: ease-in-out;
 }
 .home-section .auth-buttons a:hover, .home-section .titles-box .play-btn:hover {
-  box-shadow: 0 0 12px 7px #7551d8;
+  box-shadow: 0 0 6px 4px #7551d8;
 }
 
 body {
@@ -93,16 +93,16 @@ body::-webkit-scrollbar-thumb {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 15px;
+  font-size: 14px;
   font-family: "Righteous", cursive;
   color: #ffffff;
   text-transform: capitalize;
   transition-property: all;
-  transition-duration: 0.4s;
+  transition-duration: 0.3s;
   transition-timing-function: ease-in-out;
 }
 .home-section .auth-buttons a:hover, .home-section .titles-box .play-btn:hover {
-  box-shadow: 0 0 12px 7px #7551d8;
+  box-shadow: 0 0 6px 4px #7551d8;
 }
 
 .home-section {
@@ -182,8 +182,9 @@ body::-webkit-scrollbar-thumb {
   margin: 30px 0 100px 0;
 }
 .home-section .titles-box .play-btn {
-  width: 140px;
-  height: 40px;
+  width: 140px !important;
+  height: 40px !important;
+  font-size: 15px !important;
 }
 .home-section .auth-buttons {
   display: flex;
@@ -205,14 +206,14 @@ body::-webkit-scrollbar-thumb {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 15px;
+  font-size: 14px;
   font-family: "Righteous", cursive;
   color: #ffffff;
   text-transform: capitalize;
   transition-property: all;
-  transition-duration: 0.4s;
+  transition-duration: 0.3s;
   transition-timing-function: ease-in-out;
 }
 .home-section .titles-box .play-btn:hover, .home-section .auth-buttons a:hover {
-  box-shadow: 0 0 12px 7px #7551d8;
+  box-shadow: 0 0 6px 4px #7551d8;
 }
