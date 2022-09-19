@@ -1,0 +1,15 @@
+@import "./variables";
+@import "./mixins";
+
+%purple-btn {
+  width: 100px;
+  height: 30px;
+  background-color: $purple;
+  border-radius: 20px;
+  @include flex-property(flex, center, center);
+  @include text-property(15px, $righteous, $white, capitalize);
+  @include transition(all, 0.4s, ease-in-out);
+  &:hover {
+    box-shadow: 0 0 12px 7px $purple;
+  }
+}

@@ -1,0 +1,8 @@
+@import "../modules/variables";
+@import "../modules/classes";
+@import "../modules/mixins";
+
+body {
+  position: relative;
+  background-color: $black;
+}
