@@ -85,6 +85,28 @@ body::-webkit-scrollbar-thumb {
   border-radius: 5px;
 }
 
+.button {
+  width: 80px;
+  height: 80px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  font-family: "Righteous", cursive;
+  color: #d21c5e;
+  text-transform: uppercase;
+  transition-property: all;
+  transition-duration: 0.25s;
+  transition-timing-function: ease-in-out;
+}
+.button:hover {
+  background-color: #d21c5e;
+  color: #ffffff;
+}
+
 .home-section .auth-buttons a, .home-section .titles-box .play-btn {
   width: 100px;
   height: 30px;
@@ -196,6 +218,71 @@ body::-webkit-scrollbar-thumb {
 }
 .home-section .auth-buttons a:first-child {
   margin-right: 15px;
+}
+
+.about-section {
+  position: relative;
+  height: 717px;
+}
+.about-section .parallax-box {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.about-section .parallax-box .imgs-box {
+  position: relative;
+  height: 100%;
+}
+.about-section .parallax-box .imgs-box img {
+  position: absolute;
+  object-fit: cover;
+  width: 100%;
+  height: 717px;
+}
+.about-section .purple-box {
+  width: 380px;
+  height: 380px;
+  background-color: #7551d8;
+  box-shadow: -10px 10px 15px rgba(0, 0, 0, 0.3);
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: rotate(-45deg) translate(-25%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.about-section .purple-box .about-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transform: rotate(45deg);
+}
+.about-section .purple-box .about-info h3 {
+  font-size: 40px;
+  font-family: "Righteous", cursive;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+.about-section .purple-box .about-info p {
+  font-size: 14px;
+  font-family: "Open Sans", sans-serif;
+  color: #ffffff;
+  text-transform: none;
+  text-align: center;
+  max-width: 275px;
+  width: 100%;
+  line-height: 20px;
+  margin: 25px 0 25px 0;
+}
+.about-section .purple-box .about-info .button {
+  width: 68px;
+  height: 68px;
+  color: #7551d8;
+}
+.about-section .purple-box .about-info .button:hover {
+  color: #ffffff;
 }
 
 .home-section .titles-box .play-btn, .home-section .auth-buttons a {

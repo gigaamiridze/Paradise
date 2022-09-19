@@ -16,3 +16,19 @@ body {
     border-radius: 5px;
   }
 }
+
+// For about page
+.button {
+  width: 80px;
+  height: 80px;
+  background-color: $white;
+  border-radius: 50%;
+  cursor: pointer;
+  @include flex-property(flex, center, center);
+  @include text-property(14px, $righteous, $dark-pink, uppercase);
+  @include transition(all, 0.25s, ease-in-out);
+  &:hover {
+    background-color: $dark-pink;
+    color: $white;
+  }
+}
