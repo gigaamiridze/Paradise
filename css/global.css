@@ -1,0 +1,208 @@
+@import url("https://fonts.googleapis.com/css2?family=Monoton&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap");
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.home-section .auth-buttons a, .home-section .titles-box .play-btn {
+  width: 100px;
+  height: 30px;
+  background-color: #7551d8;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  font-family: "Righteous", cursive;
+  color: #ffffff;
+  text-transform: capitalize;
+  transition-property: all;
+  transition-duration: 0.4s;
+  transition-timing-function: ease-in-out;
+}
+.home-section .auth-buttons a:hover, .home-section .titles-box .play-btn:hover {
+  box-shadow: 0 0 12px 7px #7551d8;
+}
+
+body {
+  position: relative;
+  background-color: #131416;
+}
+
+.home-section .auth-buttons a, .home-section .titles-box .play-btn {
+  width: 100px;
+  height: 30px;
+  background-color: #7551d8;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  font-family: "Righteous", cursive;
+  color: #ffffff;
+  text-transform: capitalize;
+  transition-property: all;
+  transition-duration: 0.4s;
+  transition-timing-function: ease-in-out;
+}
+.home-section .auth-buttons a:hover, .home-section .titles-box .play-btn:hover {
+  box-shadow: 0 0 12px 7px #7551d8;
+}
+
+.home-section {
+  position: relative;
+}
+.home-section .explosions-video {
+  height: 714.5px;
+}
+.home-section .parallax-box {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.home-section .parallax-box .imgs-box {
+  position: relative;
+  height: 100%;
+}
+.home-section .parallax-box .imgs-box img {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 100%;
+  height: 710px;
+  object-fit: cover;
+}
+.home-section .parallax-box .imgs-box img:first-child, .home-section .parallax-box .imgs-box img:last-child {
+  filter: brightness(85%);
+}
+.home-section .titles-box {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -25%);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.home-section .titles-box h1 {
+  font-size: 30px;
+  font-family: "Monoton", cursive;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+.home-section .titles-box h5 {
+  font-size: 14px;
+  font-family: "Open Sans", sans-serif;
+  color: #ffffff;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 1px;
+  font-weight: 300;
+  margin: 7px 0 70px 0;
+}
+.home-section .titles-box h5::before, .home-section .titles-box h5::after {
+  content: "";
+  display: inline-block;
+  width: 25px;
+  height: 0.5px;
+  background-color: #ffffff;
+  margin: 0 5px;
+}
+.home-section .titles-box h2 {
+  font-size: 60px;
+  font-family: "Righteous", cursive;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 15px #131416;
+}
+.home-section .titles-box .night-title {
+  margin: 30px 0 100px 0;
+}
+.home-section .titles-box .play-btn {
+  width: 140px;
+  height: 40px;
+}
+.home-section .auth-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 3%;
+  right: 2%;
+}
+.home-section .auth-buttons a:first-child {
+  margin-right: 15px;
+}
+
+.home-section .titles-box .play-btn, .home-section .auth-buttons a {
+  width: 100px;
+  height: 30px;
+  background-color: #7551d8;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  font-family: "Righteous", cursive;
+  color: #ffffff;
+  text-transform: capitalize;
+  transition-property: all;
+  transition-duration: 0.4s;
+  transition-timing-function: ease-in-out;
+}
+.home-section .titles-box .play-btn:hover, .home-section .auth-buttons a:hover {
+  box-shadow: 0 0 12px 7px #7551d8;
+}

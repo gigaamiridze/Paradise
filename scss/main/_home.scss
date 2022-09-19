@@ -1,0 +1,82 @@
+@import "../modules/variables";
+@import "../modules/classes";
+@import "../modules/mixins";
+
+.home-section {
+  position: relative;
+  .explosions-video {
+    height: 714.5px;
+  }
+  .parallax-box {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    .imgs-box {
+      position: relative;
+      height: 100%;
+      img {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%); 
+        max-width: 100%;
+        height: 710px;
+        object-fit: cover;
+        &:first-child, &:last-child {
+          filter: brightness(85%);
+        }
+      }
+    }
+  }
+  .titles-box {
+    position: absolute;
+    @include positions(50%, 25%);
+    text-align: center;
+    @include flex-property(flex, center, center);
+    flex-direction: column;
+    h1 {
+      @include text-property(30px, $monoton, $white, uppercase);
+      letter-spacing: 3px;
+    }
+    h5 {
+      @include text-property(14px, $openSans, $white, uppercase);
+      @include flex-property(flex, center, center);
+      letter-spacing: 1px;
+      font-weight: $light;
+      margin: 7px 0 70px 0;
+      &::before, &::after {
+        content: "";
+        display: inline-block;
+        width: 25px;
+        height: 0.5px;
+        background-color: $white;
+        margin: 0 5px;
+      }
+    }
+    h2 {
+      @include text-property(60px, $righteous, $white, uppercase);
+      text-shadow: 2px 2px 15px $black;
+    }
+    .night-title {
+      margin: 30px 0 100px 0;
+    }
+    .play-btn {
+      @extend %purple-btn;
+      width: 140px;
+      height: 40px;
+    }
+  }
+  .auth-buttons {
+    @include flex-property(flex, center, center);
+    position: absolute;
+    top: 3%;
+    right: 2%;
+    a {
+      @extend %purple-btn;
+      &:first-child {
+        margin-right: 15px;
+      }
+    }
+  }
+}
