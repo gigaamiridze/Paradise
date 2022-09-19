@@ -5,10 +5,11 @@
 
 // Imports of scss files
 @import "./basic/reset";
+@import "./modules/variables";
+@import "./modules/mixins";
+@import "./modules/classes";
+@import "./main/keyframes";
 @import "./main/general";
 @import "./main/home";
 @import "./main/about";
 @import "./main/news";
-@import "./modules/variables";
-@import "./modules/classes";
-@import "./modules/mixins";

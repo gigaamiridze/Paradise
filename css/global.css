@@ -70,6 +70,20 @@ a {
   box-shadow: 0 0 6px 4px #7551d8;
 }
 
+@keyframes neon-hexagon {
+  0% {
+    filter: drop-shadow(0 0 1px rgba(255, 255, 255, 0.2));
+  }
+  25% {
+    filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.6));
+  }
+  50% {
+    filter: drop-shadow(0 0 3px);
+  }
+  100% {
+    filter: drop-shadow(0 0 4px);
+  }
+}
 body {
   position: relative;
   background-color: #131416;
@@ -284,6 +298,11 @@ body::-webkit-scrollbar-thumb {
 }
 .news-section .news-content .content-box {
   position: relative;
+  animation-name: neon-hexagon;
+  animation-duration: 1.5s;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
 }
 .news-section .news-content .content-box span {
   display: flex;
@@ -407,24 +426,4 @@ body::-webkit-scrollbar-thumb {
   text-align: center;
   line-height: 1.2;
   margin: 0 60px;
-}
-
-.home-section .titles-box .play-btn, .home-section .auth-buttons a {
-  width: 100px;
-  height: 30px;
-  background-color: #7551d8;
-  border-radius: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 14px;
-  font-family: "Righteous", cursive;
-  color: #ffffff;
-  text-transform: capitalize;
-  transition-property: all;
-  transition-duration: 0.3s;
-  transition-timing-function: ease-in-out;
-}
-.home-section .titles-box .play-btn:hover, .home-section .auth-buttons a:hover {
-  box-shadow: 0 0 6px 4px #7551d8;
 }

@@ -11,6 +11,7 @@
     @include flex-property(flex, space-between, center);
     .content-box {
       position: relative;
+      @include animation(neon-hexagon, 1.5s, linear, alternate, infinite);
       span {
         @include flex-property(flex, center, center);
         &::before, &::after {
