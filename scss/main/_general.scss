@@ -5,4 +5,14 @@
 body {
   position: relative;
   background-color: $black;
+  &::-webkit-scrollbar {
+    width: 10px; 
+  }
+  &::-webkit-scrollbar-track {
+    background-color: $black;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: $purple;
+    border-radius: 5px;
+  }
 }
