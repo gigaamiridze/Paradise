@@ -1,0 +1,51 @@
+@mixin positions($x, $y) {
+  top: $y;
+  left: $x;
+  transform: translate(-$x, -$y);
+}
+
+@mixin flex-property($flex, $horizontal, $vertical) {
+  display: $flex;
+  justify-content: $horizontal;
+  align-items: $vertical;
+}
+
+@mixin text-property($fontSize, $fontFamily, $color, $transform) {
+  font-size: $fontSize;
+  font-family: $fontFamily;
+  color: $color;
+  text-transform: $transform;
+}
+
+@mixin size($max, $width, $height) {
+  max-width: $max;
+  width: $width;
+  height: $height; 
+}
+
+@mixin transition($property, $duration, $timingFunc) {
+  transition-property: $property;
+  transition-duration: $duration;
+  transition-timing-function: $timingFunc;
+}
+
+@mixin border($width, $style, $color) {
+  border-width: $width;
+  border-style: $style;
+  border-color: $color;
+}
+
+@mixin animation($name, $duration, $timingFunc, $direction, $count) {
+  animation-name: $name;
+  animation-duration: $duration;
+  animation-timing-function: $timingFunc;
+  animation-direction: $direction;
+  animation-iteration-count: $count;
+}
+
+@mixin bg-img($url, $size, $position, $repeat) {
+  background-image: $url;
+  background-size: $size;
+  background-position: $position;
+  background-repeat: $repeat;
+}
