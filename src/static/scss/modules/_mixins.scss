@@ -43,8 +43,7 @@
   animation-iteration-count: $count;
 }
 
-@mixin bg-img($url, $size, $position, $repeat) {
-  background-image: $url;
+@mixin bg-img($size, $position, $repeat) {
   background-size: $size;
   background-position: $position;
   background-repeat: $repeat;

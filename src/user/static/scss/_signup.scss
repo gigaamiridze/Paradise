@@ -1,0 +1,201 @@
+.auth-bg {
+  @include bg-img(cover, center, no-repeat);
+  .form-section {
+    padding: 50px 0;
+    .form-container {
+      @include size(930px, 100%, 625px);
+      background-color: $black;
+      margin: 0 auto;
+      border-radius: 10px;
+      @include flex-property(flex, space-between, center);
+      .form-img {
+        @include size(400px, 100%, 100%);
+        @include flex-property(flex, center, center);
+        background-color: $purple;
+        border-radius: 10px 0 0 10px;
+        img {
+          max-width: 300px;
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+      .form-content {
+        width: 100%;
+        height: 100%;
+        background-color: $black;
+        padding: 35px 40px 10px;
+        border-radius: 0 10px 10px 0;
+        h2 {
+          @include text-property(24px, $mavenPro, $purple, capitalize);
+          font-weight: $semiBold;
+          position: relative;
+          &::after {
+            content: "";
+            display: block;
+            width: 380px;
+            height: 7px;
+            background: -webkit-radial-gradient(50% 50%, ellipse closest-side, $purple, rgb(255 85 62 / 0%) 60%);
+            position: absolute;
+            left: -18%;
+            margin-top: 7px;
+          }
+        }
+        form {
+          margin-top: 50px;
+          .radio-content {
+            .title {
+              @include text-property(15px, $mavenPro, $white, capitalize);
+              font-weight: $medium;
+            }
+            .field {
+              @include flex-property(flex, flex-start, center);
+              margin-top: 20px;
+              li {
+                @include flex-property(flex, center, center);
+                &:first-child {
+                  margin-right: 25px;
+                }
+                input {
+                  @extend %checkbox-style;
+                  &::after {
+                    content: "";
+                    display: block;
+                    width: 7px;
+                    height: 7px;
+                    background-color: $white;
+                    border-radius: 50%;
+                    display: none;
+                  }
+                  &:checked::after {
+                    display: block;
+                  }
+                }
+                label {
+                  @include text-property(15px, $mavenPro, $white, none);
+                }
+              }
+            }
+            .questions-box {
+              display: flex;
+              margin-top: 10px;
+              .first-box {
+                width: 75px;
+              }
+              .first-box, .second-box {
+                .artist-question, .listener-question {
+                  @include flex-property(flex, flex-start, center);
+                  cursor: pointer;
+                  .why-choose {
+                    @include text-property(10px, $mavenPro, $white, uppercase);
+                    margin-right: 5px;
+                  }
+                  .fa-circle-question {
+                    font-size: 9px;
+                    color: $white;
+                  }
+                }
+                .artist-modal, .listener-modal {
+                  position: relative;
+                  width: 160px;
+                  height: 75px;
+                  background-color: $white;
+                  border-radius: 5px;
+                  margin-top: 15px;
+                  padding: 10px 20px;
+                  @include text-property(13px, $mavenPro, $black, none);
+                  font-weight: $medium;
+                  line-height: 1.4;
+                  text-align: center;
+                  display: none;
+                  &::before {
+                    content: "";
+                    display: block;
+                    width: 0;
+                    height: 0;
+                    border-left: 8px solid transparent;
+                    border-right: 8px solid transparent;
+                    border-bottom: 10px solid #fff;
+                    position: absolute;
+                    @include positions(8%, -8%);
+                  }
+                }
+              }
+              .first-box {
+                padding-left: 3px;
+                margin-right: 20px;
+              }
+            }
+          }
+          .form-block {
+            @include flex-property(flex, space-between, center);
+            margin: 30px 0 22px 0;
+            .form-group {
+              position: relative;
+              .input-field {
+                width: 210px;
+                height: 50px;
+                background-color: transparent;
+                padding: 0 40px 0 15px;
+                @include text-property(15px, $mavenPro, $white, none);
+                @include border(1px, solid, $white);
+                border-radius: 4px;
+                outline: none;
+                &:focus {
+                  border-color: $purple;
+                  box-shadow: 0 0 10px 2px $purple;
+                }
+                &::placeholder {
+                  @include text-property(15px, $mavenPro, $white, capitalize);
+                }
+              }
+              .input-field[id='name'] {
+                text-transform: capitalize;
+              }
+              select {
+                option {
+                  background-color: $black;
+                }
+              }
+              .input-icon {
+                @include text-property(15px, 'FontAwesome', $white, none);
+                position: absolute;
+                top: 50%;
+                right: 8%;
+                transform: translateY(-50%);
+              }
+            }
+            &:nth-child(4) {
+              margin: 0;
+            }
+            &:nth-child(5) {
+              margin: 22px 0 30px 0;
+            }
+          }
+          .submit-btn {
+            width: 155px;
+            height: 40px;
+            background-color: transparent;
+            border-radius: 20px;
+            margin: 25px 0;
+            cursor: pointer;
+            @include border(1px, solid, $purple);
+            @include text-property(15px, $mavenPro, $purple, capitalize);
+            @include transition(all, 0.3s, ease-in-out);
+            &:hover {
+              box-shadow: 0 0 10px 3px $purple;
+            }
+          }
+        }
+        .auth-here {
+          @include text-property(15px, $mavenPro, $white, capitalize);
+          font-style: italic;
+          text-align: center;
+          a {
+            color: $purple;
+            font-weight: $semiBold;
+          }
+        }
+      }
+    }
+  }
+}
