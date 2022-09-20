@@ -1,4 +1,77 @@
 {% extends 'base.html' %}
 {% block content %}
-
+<body class="auth-bg" style="background-image: url('./src/user/static/img/auth-bg.jpeg')">
+  <section class="form-section">
+    <div class="form-container">
+      <div class="form-img">
+        <img src="{{ url_for('user.static', filename='img/form-img.png') }}" alt="Image">
+      </div>
+      <div class="form-content">
+        <h2>register / sign up</h2>
+        <form method="POST">
+          {{ form.hidden_tag() }}
+          <div class="radio-content">
+            <p class="title">select user type</p>
+            {{ form.role(class="field") }}
+            <div class="questions-box">
+              <div class="first-box">
+                <div class="artist-question">
+                  <h6 class="why-choose">why artist</h6>
+                  <i class="fa-solid fa-circle-question"></i>
+                </div>
+                <div class="artist-modal">
+                  This feel free to get creative and produce your own!
+                </div>
+              </div>
+              <div class="second-box">
+                <div class="listener-question">
+                  <h6 class="why-choose">why listener</h6>
+                  <i class="fa-solid fa-circle-question"></i>
+                </div>
+                <div class="listener-modal">
+                  This helps you listen to your favorite music!
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-block">
+            <div class="form-group">
+              {{ form.username(class="input-field", placeholder="enter username") }}
+              <i class="fa-light fa-user input-icon"></i>
+            </div>
+            <div class="form-group">
+              {{ form.name(class="input-field", placeholder="enter name") }}
+              <i class="fa-light fa-user input-icon"></i>
+            </div>
+          </div>
+          <div class="form-block">
+            <div class="form-group">
+              {{ form.email(class="input-field", placeholder="enter your email") }}
+              <i class="fa-light fa-envelope input-icon"></i>
+            </div>
+            <div class="form-group">
+              {{ form.password(class="input-field", placeholder="enter password") }}
+              <i class="fa-light fa-lock input-icon"></i>
+            </div>
+          </div>
+          <div class="form-block">
+            <div class="form-group">
+              {{ form.conf_pass(class="input-field", placeholder="confirm password") }}
+              <i class="fa-light fa-lock input-icon"></i>
+            </div>
+            <div class="form-group">
+              {{ form.birth_date(class="input-field") }}
+            </div>
+          </div>
+          <div class="radio-content">
+            <p class="title">select gender type</p>
+            {{ form.gender(class="field") }}
+          </div>
+          {{ form.submit(class="submit-btn") }}
+        </form>
+        <p class="auth-here">already have an account? <a href="#">sign in here</a></p>
+      </div>
+    </div>
+  </section>
+</body>
 {% endblock %}
