@@ -10,7 +10,7 @@
 @import "./modules/classes";
 @import "./main/keyframes";
 @import "./main/general";
-@import "./main/home";
-@import "./main/about";
-@import "./main/news";
-@import "./main/contact";
+@import "../../home/static/scss/home";
+@import "../../home/static/scss/about";
+@import "../../home/static/scss/news";
+@import "../../home/static/scss/contact";
