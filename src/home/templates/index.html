@@ -1,139 +1,129 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/b1609179cd.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
-    <link rel="icon" type="image/gif" href="{{ url_for('static', filename='favicon.png') }}" sizes="16x16">
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/global.css') }}">
-    <title>Paradise</title>
-  </head>
-  <body>
-    <div class="swiper mySwiper">
-      <div class="swiper-wrapper">
-        <section class="swiper-slide home-section">
-          <video class="explosions-video" autoplay loop muted>
-            <source src="{{ url_for('home.static', filename='media/video/explosions.mp4') }}" type="video/mp4">
-          </video>
-          <div class="parallax-box">
-            <div class="imgs-box">
-              <img src="{{ url_for('home.static', filename='media/img/home/home-4.png') }}" alt="Image">
-              <img src="{{ url_for('home.static', filename='media/img/home/home-3.png') }}" alt="Image">
-              <img src="{{ url_for('home.static', filename='media/img/home/home-1.png') }}" alt="Image">
-              <img src="{{ url_for('home.static', filename='media/img/home/home-2.png') }}" alt="Image">
-            </div>  
+{% extends 'base.html' %}
+{% block content %}
+<body>
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <section class="swiper-slide home-section">
+        <video class="explosions-video" autoplay loop muted>
+          <source src="{{ url_for('home.static', filename='media/video/explosions.mp4') }}" type="video/mp4">
+        </video>
+        <div class="parallax-box">
+          <div class="imgs-box">
+            <img src="{{ url_for('home.static', filename='media/img/home/home-4.png') }}" alt="Image">
+            <img src="{{ url_for('home.static', filename='media/img/home/home-3.png') }}" alt="Image">
+            <img src="{{ url_for('home.static', filename='media/img/home/home-1.png') }}" alt="Image">
+            <img src="{{ url_for('home.static', filename='media/img/home/home-2.png') }}" alt="Image">
           </div>
-          <div class="titles-box">
-            <h1>paradise</h1>
-            <h5>presents</h5>
-            <h2>feel the rhythm!</h2>
-            <h2 class="night-title">feel the night!</h2>
-            <a href="#">
-              <div class="play-btn">let's play</div>
-            </a>
+        </div>
+        <div class="titles-box">
+          <h1>paradise</h1>
+          <h5>presents</h5>
+          <h2>feel the rhythm!</h2>
+          <h2 class="night-title">feel the night!</h2>
+          <a href="#">
+            <div class="play-btn">let's play</div>
+          </a>
+        </div>
+        <div class="auth-buttons">
+          <a href="{{ url_for('user.sign_up') }}">sign up</a>
+          <a href="#">sign in</a>
+        </div>
+      </section>
+      <section class="swiper-slide about-section">
+        <div class="parallax-box">
+          <div class="imgs-box">
+            <img src="{{ url_for('home.static', filename='media/img/about/about-2.png') }}" alt="Image">
+            <img src="{{ url_for('home.static', filename='media/img/about/about-1.png') }}" alt="Image">
+            <img src="{{ url_for('home.static', filename='media/img/about/about-3.png') }}" alt="Image">
+            <img src="{{ url_for('home.static', filename='media/img/about/about-4.png') }}" alt="Image">
+            <img src="{{ url_for('home.static', filename='media/img/about/about-5.png') }}" alt="Image">
           </div>
-          <div class="auth-buttons">
-            <a href="#">register</a>
-            <a href="#">login</a>
+        </div>
+        <div class="purple-box">
+          <div class="about-info">
+            <h3>about us</h3>
+            <p>
+              Paradise is a free music streaming website where you can listen to your favorite music and discover new music.
+              We'll help you make playlists. Or enjoy playlists made by music experts.
+            </p>
+            <div class="button">more</div>
           </div>
-        </section>
-        <section class="swiper-slide about-section">
-          <div class="parallax-box">
-            <div class="imgs-box">
-              <img src="{{ url_for('home.static', filename='media/img/about/about-2.png') }}" alt="Image">
-              <img src="{{ url_for('home.static', filename='media/img/about/about-1.png') }}" alt="Image">
-              <img src="{{ url_for('home.static', filename='media/img/about/about-3.png') }}" alt="Image">
-              <img src="{{ url_for('home.static', filename='media/img/about/about-4.png') }}" alt="Image">
-              <img src="{{ url_for('home.static', filename='media/img/about/about-5.png') }}" alt="Image">
-            </div>
-          </div>
-          <div class="purple-box">
-            <div class="about-info">
-              <h3>about us</h3>
-              <p>
-                Paradise is a free music streaming website where you can listen to your favorite music and discover new music.
-                We'll help you make playlists. Or enjoy playlists made by music experts.
-              </p>
+        </div>
+      </section>
+      <section class="swiper-slide news-section">
+        <img src="{{ url_for('home.static', filename='media/img/news.jpg') }}" alt="Image">
+        <div class="news-content">
+          <div class="content-box">
+            <span></span>
+            <div class="content">
+              <h4>20.05.2022</h4>
+              <p>Doloreas fertaseta lers ertaserta sety kertya aset aplicabo nerafaesdas skeras ertyus ersvis vaserat niptai ades. asoertayse badrays. Colernatur auonse quuntur magni dolores.</p>
               <div class="button">more</div>
             </div>
           </div>
-        </section>
-        <section class="swiper-slide news-section">
-          <img src="{{ url_for('home.static', filename='media/img/news.jpg') }}" alt="Image">
-          <div class="news-content">
-            <div class="content-box">
-              <span></span>
-              <div class="content">
-                <h4>20.05.2022</h4>
-                <p>Doloreas fertaseta lers ertaserta sety kertya aset aplicabo nerafaesdas skeras ertyus ersvis vaserat niptai ades. asoertayse badrays. Colernatur auonse quuntur magni dolores.</p>
-                <div class="button">more</div>
-              </div>
-            </div>
-            <h3 class="news-title">news and events</h3>
-            <div class="content-box">
-              <span></span>
-              <div class="content">
-                <h4 class="event-date">17.10</h4>
-                <div class="event-title">
-                  <h6>magic</h6>
-                  <h6>music</h6>
-                  <h6>event</h6>
-                </div>
+          <h3 class="news-title">news and events</h3>
+          <div class="content-box">
+            <span></span>
+            <div class="content">
+              <h4 class="event-date">17.10</h4>
+              <div class="event-title">
+                <h6>magic</h6>
+                <h6>music</h6>
+                <h6>event</h6>
               </div>
             </div>
           </div>
-        </section>
-        <section class="swiper-slide contact-section">
-          <img class="bg-img" src="{{ url_for('home.static', filename='media/img/contact.png') }}" alt="Image">
-          <div class="boxes">
-            <div class="left-box">
-              <div class="contact-info">
-                <div class="addresses">
-                  <h5>georgia</h5>
-                  <h5>mtskheta</h5>
-                  <h5>chavchavadze street</h5>
-                </div>
-                <div class="mobile-mail">
-                  <p>mobile: +995 544 44 77 25</p>
-                  <p>mail: <a href="mailto:paradise@gmail.com">paradise@gmail.com</a></p>
-                </div>
-                <div class="button">contact</div>
+        </div>
+      </section>
+      <section class="swiper-slide contact-section">
+        <img class="bg-img" src="{{ url_for('home.static', filename='media/img/contact.png') }}" alt="Image">
+        <div class="boxes">
+          <div class="left-box">
+            <div class="contact-info">
+              <div class="addresses">
+                <h5>georgia</h5>
+                <h5>mtskheta</h5>
+                <h5>chavchavadze street</h5>
               </div>
-            </div>
-            <div class="right-box">
-              <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2356.9662447228025!2d44.711870256304245!3d41.842684253576536!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40446f7a429e1fff%3A0xa06e8ceed5cdf1d5!2z4YOt4YOQ4YOV4YOt4YOQ4YOV4YOQ4YOr4YOY4YOhIOGDpeGDo-GDqeGDkCwgTXRza2hldGE!5e1!3m2!1sen!2sge!4v1661978438194!5m2!1sen!2sge" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              <div class="mobile-mail">
+                <p>mobile: +995 544 44 77 25</p>
+                <p>mail: <a href="mailto:paradise@gmail.com">paradise@gmail.com</a></p>
+              </div>
+              <div class="button">contact</div>
             </div>
           </div>
-        </section>
+          <div class="right-box">
+            <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2356.9662447228025!2d44.711870256304245!3d41.842684253576536!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40446f7a429e1fff%3A0xa06e8ceed5cdf1d5!2z4YOt4YOQ4YOV4YOt4YOQ4YOV4YOQ4YOr4YOY4YOhIOGDpeGDo-GDqeGDkCwgTXRza2hldGE!5e1!3m2!1sen!2sge!4v1661978438194!5m2!1sen!2sge" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+  <div class="horizontal-block">
+    <h2>paradise</h2>
+    <div class="navigation">
+      <div class="endpoint">
+        <span>home</span>
+      </div>
+      <div class="endpoint">
+        <span>about us</span>
+      </div>
+      <div class="endpoint">
+        <span>news & events</span>
+      </div>
+      <div class="endpoint">
+        <span>contact</span>
       </div>
     </div>
-    <div class="horizontal-block">
-      <h2>paradise</h2>
-      <div class="navigation">
-        <div class="endpoint">
-          <span>home</span>
-        </div>
-        <div class="endpoint">
-          <span>about us</span>
-        </div>
-        <div class="endpoint">
-          <span>news & events</span>
-        </div>
-        <div class="endpoint">
-          <span>contact</span>
-        </div>
-      </div>
-      <div class="social-icons">
-        <a class="youtube" href="https://www.youtube.com/" target="_blank"></a>
-        <a class="instagram" href="https://www.instagram.com/" target="_blank"></a>
-        <a class="twitter" href="https://twitter.com/" target="_blank"></a>
-        <a class="facebook" href="https://www.facebook.com/" target="_blank"></a>
-        <a class="mail" href="mailto:paradise@gmail.com"></a>
-      </div>
+    <div class="social-icons">
+      <a class="youtube" href="https://www.youtube.com/" target="_blank"></a>
+      <a class="instagram" href="https://www.instagram.com/" target="_blank"></a>
+      <a class="twitter" href="https://twitter.com/" target="_blank"></a>
+      <a class="facebook" href="https://www.facebook.com/" target="_blank"></a>
+      <a class="mail" href="mailto:paradise@gmail.com"></a>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-    <script src="{{ url_for('home.static', filename='js/swiper.js') }}"></script>
-  </body>
-</html>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <script src="{{ url_for('home.static', filename='js/swiper.js') }}"></script>
+</body>
+{% endblock %}
