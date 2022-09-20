@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/b1609179cd.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
-    <link rel="icon" type="image/gif" href="media/img/favicon.png" sizes="16x16">
-    <link rel="stylesheet" type="text/css" href="css/global.css">
+    <link rel="icon" type="image/gif" href="{{ url_for('static', filename='favicon.png') }}" sizes="16x16">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/global.css') }}">
     <title>Paradise</title>
   </head>
   <body>
@@ -15,14 +15,14 @@
       <div class="swiper-wrapper">
         <section class="swiper-slide home-section">
           <video class="explosions-video" autoplay loop muted>
-            <source src="media/video/explosions.mp4" type="video/mp4">
+            <source src="{{ url_for('home.static', filename='media/video/explosions.mp4') }}" type="video/mp4">
           </video>
           <div class="parallax-box">
             <div class="imgs-box">
-              <img src="media/img/home/home-4.png" alt="Image">
-              <img src="media/img/home/home-3.png" alt="Image">
-              <img src="media/img/home/home-1.png" alt="Image">
-              <img src="media/img/home/home-2.png" alt="Image">
+              <img src="{{ url_for('home.static', filename='media/img/home/home-4.png') }}" alt="Image">
+              <img src="{{ url_for('home.static', filename='media/img/home/home-3.png') }}" alt="Image">
+              <img src="{{ url_for('home.static', filename='media/img/home/home-1.png') }}" alt="Image">
+              <img src="{{ url_for('home.static', filename='media/img/home/home-2.png') }}" alt="Image">
             </div>  
           </div>
           <div class="titles-box">
@@ -42,11 +42,11 @@
         <section class="swiper-slide about-section">
           <div class="parallax-box">
             <div class="imgs-box">
-              <img src="media/img/about/about-2.png" alt="Image">
-              <img src="media/img/about/about-1.png" alt="Image">
-              <img src="media/img/about/about-3.png" alt="Image">
-              <img src="media/img/about/about-4.png" alt="Image"> 
-              <img src="media/img/about/about-5.png" alt="Image">
+              <img src="{{ url_for('home.static', filename='media/img/about/about-2.png') }}" alt="Image">
+              <img src="{{ url_for('home.static', filename='media/img/about/about-1.png') }}" alt="Image">
+              <img src="{{ url_for('home.static', filename='media/img/about/about-3.png') }}" alt="Image">
+              <img src="{{ url_for('home.static', filename='media/img/about/about-4.png') }}" alt="Image">
+              <img src="{{ url_for('home.static', filename='media/img/about/about-5.png') }}" alt="Image">
             </div>
           </div>
           <div class="purple-box">
@@ -61,7 +61,7 @@
           </div>
         </section>
         <section class="swiper-slide news-section">
-          <img src="media/img/news.jpg" alt="Image">
+          <img src="{{ url_for('home.static', filename='media/img/news.jpg') }}" alt="Image">
           <div class="news-content">
             <div class="content-box">
               <span></span>
@@ -86,7 +86,7 @@
           </div>
         </section>
         <section class="swiper-slide contact-section">
-          <img class="bg-img" src="media/img/contact.png" alt="Image">
+          <img class="bg-img" src="{{ url_for('home.static', filename='media/img/contact.png') }}" alt="Image">
           <div class="boxes">
             <div class="left-box">
               <div class="contact-info">
@@ -134,6 +134,6 @@
       </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-    <script src="js/swiper.js"></script>
+    <script src="{{ url_for('home.static', filename='js/swiper.js') }}"></script>
   </body>
 </html>
