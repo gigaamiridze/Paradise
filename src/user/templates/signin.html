@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% block content %}
+<body class="login-body auth-bg" style="background-image: url('./src/user/static/img/auth-bg.jpeg')">
+  <section class="form-section login-section">
+    <div class="form-container login-container">
+      <div class="form-img">
+        <img src="{{ url_for('user.static', filename='img/form-img.png') }}" alt="Image">
+      </div>
+      <div class="form-content login-content">
+        <h2>login / sign in</h2>
+        <form method="POST">
+          {{ form.hidden_tag() }}
+          <div class="form-block">
+            <div class="form-group">
+              {{ form.username(class="input-field", placeholder="enter your username") }}
+              <i class="fa-light fa-user input-icon"></i>
+            </div>
+          </div>
+          <div class="form-block">
+            <div class="form-group">
+              {{ form.password(class="input-field", placeholder="enter password") }}
+              <i class="fa-light fa-lock input-icon"></i>
+            </div>
+          </div>
+          <div class="form-block">
+            <div class="form-group">
+              {{ form.remember(class="remember-field") }}
+              <p class="keep-title">Keep me signed in</p>
+            </div>
+          </div>
+          {{ form.submit(class="submit-btn") }}
+        </form>
+        <a href="#" class="forgot-pass">forgot password?</a>
+        <a class="google-service" href="https://www.google.com/account/about/" target="_blank">
+          <i class="fa-brands fa-google-plus-g"></i>
+          continue with google
+        </a>
+        <p class="auth-here">don't have an account? <a href="{{ url_for('user.sign_up') }}">sign up here</a></p>
+      </div>
+    </div>
+  </section>
+</body>
+{% endblock %}

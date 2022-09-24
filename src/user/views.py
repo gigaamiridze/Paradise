@@ -6,3 +6,8 @@ from .forms import Signup, Signin
 def sign_up():
     form = Signup()
     return render_template('signup.html', form=form)
+
+@user_blueprint.route('/signin', methods=['GET', 'POST'])
+def sign_in():
+    form = Signin()
+    return render_template('signin.html', form=form)

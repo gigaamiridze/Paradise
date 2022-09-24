@@ -1,0 +1,83 @@
+.login-body {
+  height: 100vh;
+  .login-section {
+    padding: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    .login-container {
+      height: 477px;
+      .login-content {
+        h2 {
+          &::after {
+            width: 350px;
+            left: -20%;
+          }
+        }
+        form {
+          margin-top: 45px;
+          .form-block {
+            margin: 0;
+            &:nth-child(3) {
+              margin: 22px 0;
+            }
+            .form-group {
+              width: 100%;
+              @include flex-property(flex, flex-start, center);
+              .input-field {
+                width: 100%;
+              }
+              .input-icon {
+                right: 4%;
+              }
+              .remember-field {
+                @extend %checkbox-style;
+                &::after {
+                  content: "✓";
+                  display: block;
+                  font-size: 10px;
+                  color: $white;
+                  display: none;
+                }
+                &:checked::after {
+                  display: block;
+                }
+              }
+              .keep-title {
+                @include text-property(15px, $mavenPro, $white, none);
+              }
+            }
+          }
+          .submit-btn {
+            margin: 20px 0;
+          }
+        }
+        .forgot-pass {
+          @include text-property(16px, $mavenPro, $purple, capitalize);
+          font-weight: $semiBold;
+          letter-spacing: 1px;
+        }
+        .google-service {
+          width: 200px;
+          height: 35px;
+          background-color: transparent;
+          @include border(1px, solid, $purple);
+          border-radius: 20px;
+          margin: 20px 0;
+          @include flex-property(flex, center, center);
+          @include text-property(14px, $mavenPro, $purple, capitalize);
+          @include transition(all, 0.3s, ease-in-out);
+          &:hover {
+            background-color: $purple;
+            color: $white;
+          }
+          i {
+            font-size: 14px;
+            margin-right: 5px;
+          }
+        }
+      }
+    }
+  }
+}
