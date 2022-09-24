@@ -1,3 +1,4 @@
+{% from 'macros/navbar.html' import navbar_generator %}
 {% extends 'base.html' %}
 {% block content %}
 <body>
@@ -102,18 +103,7 @@
   <div class="horizontal-block">
     <h2>paradise</h2>
     <div class="navigation">
-      <div class="endpoint">
-        <span>home</span>
-      </div>
-      <div class="endpoint">
-        <span>about us</span>
-      </div>
-      <div class="endpoint">
-        <span>news & events</span>
-      </div>
-      <div class="endpoint">
-        <span>contact</span>
-      </div>
+      {{ navbar_generator(navbar_menu) }}
     </div>
     <div class="social-icons">
       <a class="youtube" href="https://www.youtube.com/" target="_blank"></a>
