@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Monoton&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap");
@@ -71,7 +72,7 @@ a {
   box-shadow: 0 0 6px 4px #7551d8;
 }
 
-.auth-bg .form-section .form-container .form-content form .radio-content .field li input {
+.login-body .login-section .login-container .login-content form .form-block .form-group .remember-field, .auth-bg .form-section .form-container .form-content form .radio-content .field li input {
   margin: 0 7px 0 0;
   appearance: none;
   width: 17px;
@@ -867,4 +868,98 @@ body .horizontal-block .social-icons .mail::before {
 .auth-bg .form-section .form-container .form-content .auth-here a {
   color: #7551d8;
   font-weight: 600;
+}
+
+.login-body {
+  height: 100vh;
+}
+.login-body .login-section {
+  padding: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+}
+.login-body .login-section .login-container {
+  height: 477px;
+}
+.login-body .login-section .login-container .login-content h2::after {
+  width: 350px;
+  left: -20%;
+}
+.login-body .login-section .login-container .login-content form {
+  margin-top: 45px;
+}
+.login-body .login-section .login-container .login-content form .form-block {
+  margin: 0;
+}
+.login-body .login-section .login-container .login-content form .form-block:nth-child(3) {
+  margin: 22px 0;
+}
+.login-body .login-section .login-container .login-content form .form-block .form-group {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.login-body .login-section .login-container .login-content form .form-block .form-group .input-field {
+  width: 100%;
+}
+.login-body .login-section .login-container .login-content form .form-block .form-group .input-icon {
+  right: 4%;
+}
+.login-body .login-section .login-container .login-content form .form-block .form-group .remember-field::after {
+  content: "✓";
+  display: block;
+  font-size: 10px;
+  color: #ffffff;
+  display: none;
+}
+.login-body .login-section .login-container .login-content form .form-block .form-group .remember-field:checked::after {
+  display: block;
+}
+.login-body .login-section .login-container .login-content form .form-block .form-group .keep-title {
+  font-size: 15px;
+  font-family: "Maven Pro", sans-serif;
+  color: #ffffff;
+  text-transform: none;
+}
+.login-body .login-section .login-container .login-content form .submit-btn {
+  margin: 20px 0;
+}
+.login-body .login-section .login-container .login-content .forgot-pass {
+  font-size: 16px;
+  font-family: "Maven Pro", sans-serif;
+  color: #7551d8;
+  text-transform: capitalize;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+.login-body .login-section .login-container .login-content .google-service {
+  width: 200px;
+  height: 35px;
+  background-color: transparent;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #7551d8;
+  border-radius: 20px;
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  font-family: "Maven Pro", sans-serif;
+  color: #7551d8;
+  text-transform: capitalize;
+  transition-property: all;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+}
+.login-body .login-section .login-container .login-content .google-service:hover {
+  background-color: #7551d8;
+  color: #ffffff;
+}
+.login-body .login-section .login-container .login-content .google-service i {
+  font-size: 14px;
+  margin-right: 5px;
 }

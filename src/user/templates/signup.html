@@ -69,7 +69,7 @@
           </div>
           {{ form.submit(class="submit-btn") }}
         </form>
-        <p class="auth-here">already have an account? <a href="#">sign in here</a></p>
+        <p class="auth-here">already have an account? <a href="{{ url_for('user.sign_in') }}">sign in here</a></p>
       </div>
     </div>
   </section>
