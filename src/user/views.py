@@ -21,7 +21,7 @@ def sign_up():
         user = User(role=role, username=username, name=name, email=email, password=password,
                     birth_date=birth_date, gender=gender)
         user.save_to_db()
-        
+
         return redirect(url_for('user.signin'))
 
     return render_template('signup.html', form=form, pages=pages)
@@ -42,7 +42,7 @@ def sign_in():
             next = request.args.get('next')
 
             if next is None:
-                next = url_for('dashboard.dash_main')
+                next = url_for('dashboard.dash_home')
 
             return redirect(next)
 
