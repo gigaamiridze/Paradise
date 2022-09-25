@@ -22,7 +22,7 @@ def sign_up():
                     birth_date=birth_date, gender=gender)
         user.save_to_db()
 
-        return redirect(url_for('user.signin'))
+        return redirect(url_for('user.sign_in'))
 
     return render_template('signup.html', form=form, pages=pages)
 
