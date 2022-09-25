@@ -1,8 +1,9 @@
 from src.extensions import db
 from src.models import Base
+from flask_login import UserMixin
 from werkzeug.security import generate_password_hash, check_password_hash
 
-class User(Base):
+class User(Base, UserMixin):
 
     __tablename__ = 'users'
 
