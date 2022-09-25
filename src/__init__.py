@@ -31,3 +31,6 @@ def register_blueprints(app):
 
     from src.user.views import user_blueprint
     app.register_blueprint(user_blueprint, url_prefix='/user')
+
+    from src.dashboard.views import dashboard_blueprint
+    app.register_blueprint(dashboard_blueprint, url_prefix='/dashboard')
