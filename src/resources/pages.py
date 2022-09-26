@@ -11,4 +11,8 @@ pages = [
         "endpoint": "user.sign_in",
         "title": "Sign In"
     },
+    {
+        "endpoint": "dashboard.dash_home",
+        "title": "Paradise - Web Player"
+    },
 ]
