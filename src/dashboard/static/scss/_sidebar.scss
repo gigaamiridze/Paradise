@@ -1,0 +1,148 @@
+.dashboard-body {
+  background-color: $black;
+  height: 100vh;
+  .sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 280px;
+    background-color: $black1;
+    z-index: 22;
+    @include transition(all, 0.4s, ease-in-out);
+    &.active {
+      width: 72px;
+    }
+    &.active .sidebar-head {
+      justify-content: center;
+    }
+    &.active .sidebar-head .burger-menu div {
+      &:nth-child(2) {
+        width: 100%;
+      }
+    }
+    &.active .sidebar-head a,
+    &.active .sidebar-body nav ul li .nav-link span,
+    &.active .sidebar-foot .add-music-link .add-btn span {
+      display: none;
+    }
+    &.active .sidebar-body nav ul li .tool-type,
+    &.active .sidebar-foot .add-music-link .tool-type {
+      display: block;
+    }
+    &.active .sidebar-foot {
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+    &.active .sidebar-foot .add-music-link .add-btn i {
+      margin-right: 0;
+    }
+    .sidebar-head {
+      @include flex-property(flex, space-between, center);
+      padding: 30px 18px 50px;
+      a {
+        @include text-property(22px, $monoton, $white, uppercase);
+      }
+      .burger-menu {
+        width: 20px;
+        height: 17px;
+        @include flex-property(flex, space-between, flex-end);
+        flex-direction: column;
+        cursor: pointer;
+        div {
+          width: 100%;
+          height: 2px;
+          background-color: $white;
+          border-radius: 2px;
+          &:nth-child(2) {
+            width: 14px;
+          }
+        }
+      }
+    }
+    .sidebar-body {
+      nav {
+        ul {
+          line-height: 25px;
+          li {
+            position: relative;
+            &:hover .tool-type {
+              opacity: 1;
+              top: 50%;
+              transform: translateY(-50%);
+            }
+            .nav-link {
+              position: relative;
+              display: block;
+              color: $grey2;
+              padding: 12px 0;
+              @include transition(all, 0.3s, ease);
+              &.active,
+              &:hover {
+                color: $purple;
+                background: linear-gradient(90deg,rgba(117,81,216,.1) 0,rgba(117,81,216,0) 100%);
+                &::before {
+                  content: "";
+                  display: block;
+                  width: 4px;
+                  height: 100%;
+                  background-color: $purple;
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                }
+              }
+              i {
+                font-size: 16px;
+                font-family: "FontAwesome";
+                margin: 0 16px 0 30px;
+              }
+              span {
+                @include text-property(14.5px, $openSans, none, capitalize);
+                font-weight: $medium;
+              }
+            }
+            .tool-type {
+              @extend %tool-type;
+            }
+          }
+        }
+      }
+    }
+    .sidebar-foot {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      padding: 50px 22px 20px;
+      .add-music-link {
+        position: relative;
+        .add-btn {
+          @include flex-property(flex, center, center);
+          width: 100%;
+          height: 40px;
+          background-color: $purple;
+          color: $white;
+          border-radius: 5px;
+          @include transition(all, 0.2s, ease-in-out);
+          &:hover {
+            filter: brightness(0.85);
+          }
+          i {
+            font-size: 16px;
+            font-family: "FontAwesome";
+            margin-right: 10px;
+          }
+          span {
+            @include text-property(14.5px, $openSans, none, capitalize);
+            font-weight: $medium;
+          }
+        }
+        .tool-type {
+          @extend %tool-type;
+          right: -320%;
+          padding-top: 7px;
+        }
+      }
+    }
+  }
+}
