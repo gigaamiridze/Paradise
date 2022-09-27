@@ -40,5 +40,21 @@
         </a>
       </div>
     </aside>
+    <header>
+      <div class="container">
+        <div class="header-content">
+          <form>
+            <label for="search-input">
+              <i class="fa-light fa-magnifying-glass"></i>
+            </label>
+            <input type="search" class="search-input" id="search-input" placeholder="Type anything to get result...">
+          </form>
+          <div class="user-box">
+            <div class="user-img"></div>
+            <span class="user-username">{{ current_user.username | capitalize() }}</span>
+          </div>
+        </div>
+      </div>
+    </header>
   </body>
 </html>

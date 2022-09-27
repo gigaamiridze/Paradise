@@ -1,0 +1,57 @@
+header {
+  position: fixed;
+  top: 3%;
+  right: 0;
+  width: 100%;
+  padding: 0 30px 0 310px;
+  z-index: 20;
+  @include transition(all, 0.4s, ease-in-out);
+  &.less-padd {
+    padding-left: 100px;
+  }
+  .header-content {
+    height: 48px;
+    background-color: $purple;
+    border-radius: 6px;
+    padding: 0 25px;
+    @include flex-property(flex, space-between, center);
+    form {
+      width: 650px;
+      height: 32px;
+      @include flex-property(flex, center, center);
+      label {
+        i {
+          font-size: 20px;
+          font-family: "FontAwesome";
+          color: $white;
+          cursor: pointer;
+        }
+      }
+      .search-input {
+        width: 100%;
+        height: 32px;
+        background-color: transparent;
+        margin-left: 10px;
+        border: none;
+        outline: none;
+        @include text-property(13px, $openSans, $white, none);
+        &::placeholder {
+          @include text-property(13px, $openSans, $white, none);
+        }
+      }
+    }
+    .user-box {
+      @include flex-property(flex, center, center);
+      .user-img {
+        width: 32px;
+        height: 32px;
+        background-color: $white;
+        border-radius: 50%;
+        margin-right: 10px;
+      }
+      .user-username {
+        @include text-property(15px, $openSans, $white, none);
+      }
+    }
+  }
+}
