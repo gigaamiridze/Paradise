@@ -23,3 +23,19 @@
   outline: none;
   @include flex-property(flex, center, center);
 }
+
+%tool-type {
+  width: 120px;
+  height: 30px;
+  background-color: $purple;
+  border-radius: 6px;
+  position: absolute;
+  top: 0;
+  right: -150%;
+  @include text-property(14.5px, $openSans, $grey2, capitalize);
+  font-weight: $medium;
+  text-align: center;
+  display: none;
+  opacity: 0;
+  @include transition(all, 0.3s, ease-in-out);
+}
