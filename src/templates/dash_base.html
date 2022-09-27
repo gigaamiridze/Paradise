@@ -1,4 +1,5 @@
 {% from 'macros/title.html' import title_generator %}
+{% from 'macros/sidebar_menu.html' import sidebar_menu_generator %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -12,7 +13,32 @@
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/global.css') }}">
     {{ title_generator(pages) }}
   </head>
-  <body>
-
+  <body class="dashboard-body">
+    <aside class="sidebar">
+      <div class="sidebar-head">
+        <a href="{{ url_for('home.home_page') }}">paradise</a>
+        <div class="burger-menu">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+      <div class="sidebar-body">
+        <nav>
+          <ul>
+            {{ sidebar_menu_generator(sidebar_menu) }}
+          </ul>
+        </nav>
+      </div>
+      <div class="sidebar-foot">
+        <a class="add-music-link" href="{{ url_for('dashboard.add_music') }}">
+          <div class="add-btn">
+            <i class="fa-light fa-music"></i>
+            <span>add music</span>
+          </div>
+          <span class="tool-type">add music</span>
+        </a>
+      </div>
+    </aside>
   </body>
 </html>
