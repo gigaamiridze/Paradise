@@ -11,8 +11,8 @@ function buildStyles() {
 
 exports.buildStyles = buildStyles;
 exports.watch = function () {
-  gulp.watch('src/static/scss/**/*.scss',
-             'src/home/static/scss/*.scss',
-             'src/user/static/scss/*.scss',
-             'src/dashboard/static/scss/*.scss', buildStyles);
+  gulp.watch('src/static/scss/**/*.scss', buildStyles);
+  gulp.watch('src/home/static/scss/*.scss', buildStyles);
+  gulp.watch('src/user/static/scss/*.scss', buildStyles);
+  gulp.watch('src/dashboard/static/scss/*.scss', buildStyles);
 };
