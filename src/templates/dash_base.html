@@ -56,5 +56,28 @@
         </div>
       </div>
     </header>
+    <main class="page-content">
+      {% block content %}
+      {% endblock %}
+      <footer style="background-image: url({{ url_for('dashboard.static', filename='media/img/footer.jpg') }})">
+        <div class="footer-content">
+          <a class="mail-link" href="mailto:paradise@gmail.com">paradise@gmail.com</a>
+          <div class="app-buttons">
+            <div class="purple-btn">
+              <a href="#">
+                <i class="fa-brands fa-google-play"></i>
+                <span>google play</span>
+              </a>
+            </div>
+            <div class="purple-btn">
+              <a href="#">
+                <i class="fa-brands fa-app-store"></i>
+                <span>app store</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </main>
   </body>
 </html>

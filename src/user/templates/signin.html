@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% block content %}
-<body class="login-body auth-bg" style="background-image: url('./src/user/static/img/auth-bg.jpeg')">
+<body class="login-body auth-bg" style="background-image: url({{ url_for('user.static', filename='img/auth-bg.jpeg') }})">
   <section class="form-section login-section">
     <div class="form-container login-container">
       <div class="form-img">
