@@ -23,4 +23,233 @@
       background-image: linear-gradient(0deg, #131416 0, rgba(19, 20, 22, .25) 100%);
     }
   }
+  .form-block {
+    @include flex-property(flex, center, none);
+    .card {
+      max-width: 526px;
+      width: 100%;
+      background-color: $black1;
+      border-radius: 10px;
+      box-shadow: rgb(0 0 0 / 50%) 0 0 1.5rem;
+      .card-head {
+        @include flex-property(flex, center, center);
+        flex-direction: column;
+        padding-top: 25px;
+        &::after {
+          content: "";
+          display: block;
+          width: 100%;
+          height: 0.5px;
+          background-color: $grey3;
+        }
+        h3 {
+          @include text-property(15px, $openSans, $purple, capitalize);
+          font-weight: $medium;
+          height: 25px;
+          position: relative;
+          &::after {
+            content: "";
+            display: block;
+            width: 90px;
+            height: 2px;
+            background-color: $purple;
+            border-radius: 5px;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+          }
+        }
+      }
+      .card-body {
+        padding: 20px;
+        form {
+          .img-uploader {
+            @include flex-property(flex, center, center);
+            flex-direction: column;
+            @include border(1px, dashed, $grey3);
+            border-radius: 7px;
+            padding: 30px 0;
+            i {
+              font-size: 30px;
+              font-family: "FontAwesome";
+              color: $white;
+              margin-bottom: 20px;
+            }
+            p {
+              @include text-property(15px, $openSans, $grey4, none);
+            }
+            .size-paragraph {
+              font-size: 12px;
+              color: $grey5;
+              margin: 8px 0 20px;
+            }
+            input {
+              display: none;
+            }
+            label {
+              width: 160px;
+              height: 40px;
+              background-color: rgba(117, 81, 216, 0.3);
+              border-radius: 5px;
+              cursor: pointer;
+              @include text-property(14px, $openSans, $purple, none);
+              font-weight: $medium;
+              @include flex-property(flex, center, center);
+              @include transition(all, 0.2s, ease-in-out);
+              &:hover {
+                @include border(1px, solid, $purple);
+              }
+            }
+          }
+          .form-group {
+            margin-top: 23px;
+            &:last-child {
+              @include flex-property(flex, center, center);
+              flex-direction: column;
+            }
+            &:last-child::before {
+              content: "";
+              display: block;
+              width: 100%;
+              height: 0.5px;
+              background-color: $grey3;
+            }
+            .input-field {
+              width: 100%;
+              height: 40px;
+              background-color: transparent;
+              @include text-property(14px, $openSans, $grey5, none);
+              @include border(1px, solid, $grey3);
+              border-radius: 6px;
+              padding: 0 15px;
+              outline: none;
+              @include transition(all, .15s, ease-in-out);
+              &::placeholder {
+                @include text-property(14px, $openSans, $grey5, none);
+              }
+              &:focus {
+                box-shadow: 0 0 3px 3px $purple;
+              }
+            }
+            .select-field {
+              padding: 0 10px;
+              color: $grey4;
+              cursor: pointer;
+              option {
+                background-color: $black1;
+              }
+            }
+            .textarea {
+              height: 90px;
+              padding: 7px 15px;
+              resize: vertical;
+            }
+            ul {
+              @include flex-property(flex, flex-start, center);
+              li {
+                @include flex-property(flex, center, center);
+                &:first-child {
+                  margin-right: 25px;
+                }
+                input {
+                  @extend %checkbox-style;
+                  &::after {
+                  content: "";
+                  display: block;
+                  width: 7px;
+                  height: 7px;
+                  background-color: $white;
+                  border-radius: 50%;
+                  display: none;
+                  }
+                  &:focus {
+                    background-color: $purple;
+                    border: none;
+                  }
+                  &:checked::after {
+                    display: block;
+                  }
+                }
+                label {
+                  margin-bottom: 0;
+                }
+              }
+            }
+            .less-width {
+              width: 47.5%;
+            }
+            label {
+              @include text-property(14px, $openSans, $grey4, none);
+              margin-bottom: 10px;
+            }
+            .second-file {
+              height: 40px;
+              @include border(1px, solid, $grey3);
+              border-radius: 6px;
+              .custom-btn {
+                width: 105px;
+                height: 100%;
+                background-color: $grey3;
+                cursor: pointer;
+                outline: none;
+                border: none;
+                border-radius: 6px 0 0 6px;
+                @include text-property(14px, $openSans, $grey4, none);
+                @include transition(background-color, .15s, ease-in-out);
+                &:hover {
+                  background-color: $white;
+                }
+              }
+              .custom-txt {
+                @include text-property(14px, $openSans, $grey4, none);
+                margin-left: 12px;
+              }
+            }
+            .icon-box {
+              width: 64px;
+              height: 40px;
+              background-color: $grey3;
+              border-radius: 6px 0 0 6px;
+              @include flex-property(flex, center, center);
+              i {
+                font-size: 24px;
+                color: $grey4;
+              }
+            }
+            .number-field {
+              border-radius: 0 6px 6px 0;
+            }
+            .price-paragraph {
+              @include text-property(12px, $openSans, $grey5, none);
+              margin-top: 7px;
+            }
+            .submit-btn {
+              width: 140px;
+              height: 40px;
+              background-color: $purple;
+              cursor: pointer;
+              outline: none;
+              border: none;
+              border-radius: 6px;
+              margin-top: 20px;
+              @include text-property(14px, $openSans, $white, capitalize);
+              font-weight: $medium;
+              @include transition(all, 0.2s, ease-in-out);
+              &:hover {
+                filter: brightness(0.85);
+              }
+              &:focus {
+                box-shadow: 0 0 6px 3px $purple;
+              }
+            }
+          }
+          .column {
+            display: flex;
+            flex-direction: column;
+          }
+        }
+      }
+    }
+  }
 }
