@@ -1,7 +1,8 @@
-from flask import render_template
+from flask import render_template, redirect, url_for
 from flask_login import login_required
 from . import dashboard_blueprint
 from src.resources import pages, sidebar_menu
+from .forms import Music
 
 @dashboard_blueprint.route('/home')
 @login_required
@@ -34,4 +35,21 @@ def events():
 
 @dashboard_blueprint.route('/add-music', methods=['GET', 'POST'])
 def add_music():
-    return render_template('add-music.html', pages=pages, sidebar_menu=sidebar_menu)
+    form = Music()
+
+    if form.validate_on_submit():
+        music_img = form.music_img.data
+        music_name = form.music_name.data
+        music_file = form.music_file.data
+        artist = form.artist.data
+        composer = form.composer.data
+        lyricist = form.lyricist.data
+        music_director = form.music_director.data
+        category = form.category.data
+        lyrics = form.lyrics.data
+        free_or_paid = form.free_or_paid.data
+        music_price = form.music_price.data
+
+        return redirect(url_for('dashboard.musics'))
+
+    return render_template('add-music.html', pages=pages, sidebar_menu=sidebar_menu, form=form)

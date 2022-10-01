@@ -1,4 +1,65 @@
 {% extends 'dash_base.html' %}
 {% block content %}
   <div class="bg-img" style="background-image: url({{ url_for('dashboard.static', filename='media/img/guitar.jpg') }})"></div>
+  <div class="form-block">
+    <div class="card">
+      <div class="card-head">
+        <h3>add music</h3>
+      </div>
+      <div class="card-body">
+        <form method="POST" enctype="multipart/form-data">
+          {{ form.hidden_tag() }}
+          <div class="img-uploader">
+            <i class="fa-light fa-cloud-arrow-up"></i>
+            <p>Drag & Drop or click to Upload</p>
+            <p class="size-paragraph">320x320 (Max: 120KB)</p>
+            {{ form.music_img(accept=".jpg, .jpeg, .png, .svg") }} {{ form.music_img.label() }}
+          </div>
+          <div class="form-group">
+            {{ form.music_name(class="input-field", placeholder="Song name") }}
+          </div>
+          <div class="form-group column">
+            {{ form.music_file.label() }} {{ form.music_file(class="real-file", hidden="hidden", accept=".mp3, .mp4, .m4a, .flac, .wav, .wma, .aac") }}
+            <div class="second-file">
+              <button type="button" class="custom-btn">Choose file</button>
+              <span class="custom-txt">No file chosen, yet</span>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="flex-block">
+              {{ form.artist(class="input-field less-width", placeholder="Artist") }}
+              {{ form.composer(class="input-field less-width", placeholder="Composer") }}
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="flex-block">
+              {{ form.lyricist(class="input-field less-width", placeholder="Lyricist") }}
+              {{ form.music_director(class="input-field less-width", placeholder="Music director") }}
+            </div>
+          </div>
+          <div class="form-group">
+            {{ form.category(class="input-field select-field") }}
+          </div>
+          <div class="form-group">
+            {{ form.lyrics(class="input-field textarea", placeholder="Lyrics") }}
+          </div>
+          <div class="form-group">
+            {{ form.free_or_paid() }}
+          </div>
+          <div class="form-group">
+            <div class="flex-block">
+              <div class="icon-box">
+                <i class='bx bx-dollar-circle'></i>
+              </div>
+              {{ form.music_price(class="input-field number-field", placeholder="Song price") }}
+            </div>
+            <p class="price-paragraph">Please add ticket price if Event is paid</p>
+          </div>
+          <div class="form-group">
+            {{ form.submit(class="submit-btn") }}
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
 {% endblock %}
