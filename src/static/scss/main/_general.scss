@@ -88,6 +88,15 @@ body {
   }
 }
 
+.container {
+  max-width: 930px;
+  margin: 0 auto;
+  @include transition(all, 0.4s, ease-in-out);
+  &.more-width {
+    max-width: 1140px;
+  }
+}
+
 // 'more' button
 .button {
   width: 80px;
@@ -102,4 +111,8 @@ body {
     background-color: $dark-pink;
     color: $white;
   }
+}
+
+.flex-block {
+  @include flex-property(flex, space-between, center);
 }
