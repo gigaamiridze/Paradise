@@ -63,3 +63,7 @@
     </div>
   </div>
 {% endblock %}
+
+{% block script_src %}
+  <script src="{{ url_for('dashboard.static', filename='js/song-field.js') }}"></script>
+{% endblock %}
